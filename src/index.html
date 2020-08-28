@@ -4,51 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Baza</title>
   </head>
 
   <body>
-    <div class="header">
-      <div id="container-header" class="container">
-        <div id="wrap-btn wrap-header" class="wrap-btn">
+    <div id="app" class="container">
+      <div class="excel">
+        <div class="excel__header">
+          <input type="text" class="input" value="New Table" />
           <div>
-            <div id="toggles">
-              <input
-                type="checkbox"
-                name="checkbox1"
-                id="checkboxStatus"
-                class="ios-toggle"
-              />
-              <label
-                for="checkboxStatus"
-                class="checkbox-label"
-                data-off="Server off"
-                data-on="Server on"
-              ></label>
+            <div class="button">
+              <i class="material-icons">delete</i>
+            </div>
+            <div class="button">
+              <i class="material-icons">exit_to_app</i>
             </div>
           </div>
-          <input id="mesInput" type="text" class="mes" placeholder="New task" />
-          <button id="sendMessage" class="btn">Send</button>
-          <input
-            id="nameInput"
-            type="text"
-            class="mes-input"
-            placeholder="Your name"
-          />
         </div>
-      </div>
-    </div>
-    <div id="container" class="container">
-      <div id="wrap-chat" class="wrap-chat">
-        <!-- <div class="p from-me ef">
-          <label for="" class="name">Alex:</label>
-          <div class="load-3">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-          HI
-        </div>доработать сделать статуc набирания текста -->
+        <div class="excel__toolbar"></div>
+        <div class="excel__formula"></div>
+        <div class="excel__table"></div>
       </div>
     </div>
   </body>

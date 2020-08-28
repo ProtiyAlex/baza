@@ -20,7 +20,7 @@ const jsLoaders = () => {
   ];
 
   if (isDev) {
-    // loaders.push("eslint-loader");
+    loaders.push("eslint-loader");
   }
 
   return loaders;
@@ -30,6 +30,8 @@ module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: ["@babel/polyfill", "./js/index.js"],
+  // entry: path.resolve(__dirname, "src") + "/js/index.js",
+  // entry: "./src/js/index.js",
   output: {
     filename: filename("js"),
     path: path.resolve(__dirname, "dist"),
@@ -89,3 +91,7 @@ module.exports = {
     ],
   },
 };
+// devtool: "inline-source-map",
+// devServer: {
+//   contentBase: "./dist",
+// },
