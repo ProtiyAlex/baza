@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Baza</title>
+  </head>
+
+  <body>
+    <div id="app" class="container_">
+      <div class="excel">
+        <div class="excel__header">
+          <input type="text" class="input" value="New Table" />
+          <div>
+            <div class="button">
+              <i class="material-icons">delete</i>
+            </div>
+            <div class="button">
+              <i class="material-icons">exit_to_app</i>
+            </div>
+          </div>
+        </div>
+        <div class="excel__toolbar">
+          <div class="button">
+            <i class="material-icons">format_align_left</i>
+          </div>
+
+          <div class="button">
+            <i class="material-icons">format_align_center</i>
+          </div>
+
+          <div class="button">
+            <i class="material-icons">format_align_right</i>
+          </div>
+
+          <div class="button">
+            <i class="material-icons">format_bold</i>
+          </div>
+
+          <div class="button">
+            <i class="material-icons">format_italic</i>
+          </div>
+
+          <div class="button">
+            <i class="material-icons">format_underlined</i>
+          </div>
+        </div>
+
+        <div class="excel__table">
+          <div class="row1">
+            <div class="row-info"></div>
+
+            <div class="row-data">
+              <div class="column">Сумма</div>
+              <div class="column">Фирма от</div>
+              <div class="column">Фирма куда</div>
+              <div class="column">№ машины</div>
+              <div class="column">Машина</div>
+              <div class="column">Доп</div>
+              <div class="column">Бензин</div>
+              <div class="column">За лом</div>
+              <div class="column">Амортиз.</div>
+              <div class="column">Доп</div>
+              <div class="column">Итого</div>
+              <div class="column">Вид Лома</div>
+              <div class="column">Bec</div>
+              <div class="column">Сред. Цена</div>
+              <div class="column">Прибыль</div>
+              <div class="column">Цена реализации</div>
+              <div class="column">Доп</div>
+              <div class="column">Долг Нам</div>
+              <div class="column">Долг Мы</div>
+              <div class="column">Приход</div>
+              <div class="column">Примечание</div>
+            </div>
+          </div>
+
+          <div class="row1">
+            <div class="row-info">1</div>
+
+            <div class="row-data">
+              <div class="cell" contenteditable="">192654</div>
+              <div class="cell selected" contenteditable="">Санпласт</div>
+              <div class="cell" contenteditable="">Площадка</div>
+              <div class="cell" contenteditable="">6177</div>
+              <div class="cell" contenteditable="">1500</div>
+              <div class="cell" contenteditable="">300</div>
+              <div class="cell" contenteditable="">2500</div>
+              <div class="cell" contenteditable="">124562</div>
+              <div class="cell" contenteditable="">2100</div>
+              <div class="cell" contenteditable="">35000</div>
+              <div class="cell" contenteditable="">162543</div>
+              <div class="cell" contenteditable="">501</div>
+              <div class="cell" contenteditable="">23.45</div>
+              <div class="cell" contenteditable="">1645.25</div>
+              <div class="cell" contenteditable="">23542</div>
+              <div class="cell" contenteditable="">42000</div>
+              <div class="cell" contenteditable="">12354</div>
+              <div class="cell" contenteditable="">152466</div>
+              <div class="cell" contenteditable="">657852</div>
+              <div class="cell" contenteditable=""></div>
+              <div class="cell" contenteditable="">надо что-то написать</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h1>Старт работ 27/08/20</h1>
+      <p>Проект база</p>
+    </div> -->
+    <!-- 
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container_" style="margin: 30px 0 0 30px">
+      <div class="row">
+        <div class="col-sm-1">
+          <h2>About Me</h2>
+          <h5>Photo of me:</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+          <h3>Some Links</h3>
+          <p>Lorem ipsum dolor sit ame.</p>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <hr class="d-sm-none" />
+        </div>
+        <div class="col-sm-11">
+          <table
+            class="table table-sm table-hover table-striped table-bordered"
+          >
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Сумма</th>
+                <th scope="col">Фирма от</th>
+                <th scope="col">Фирма куда</th>
+                <th scope="col">№ машины</th>
+                <th scope="col">Машина</th>
+                <th scope="col">Доп</th>
+                <th scope="col">Бензин</th>
+                <th scope="col">За лом</th>
+                <th scope="col">Амортиз.</th>
+                <th scope="col">Доп</th>
+                <th scope="col">Итого</th>
+                <th scope="col">Вид Лома</th>
+                <th scope="col">Вес</th>
+                <th scope="col">Сред. Цена</th>
+                <th scope="col">Прибыль</th>
+                <th scope="col">Цена реализации</th>
+                <th scope="col">Доп</th>
+                <th scope="col">Долг Нам</th>
+                <th scope="col">Долг Мы</th>
+                <th scope="col">Доп</th>
+                <th scope="col">Приход</th>
+                <th scope="col">Примечание</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>192654</td>
+                <td>Санпласт</td>
+                <td>Площадка</td>
+                <td>6177</td>
+                <td>1500</td>
+                <td>300</td>
+                <td>2500</td>
+                <td>124562</td>
+                <td>2100</td>
+                <td>35000</td>
+                <td>162543</td>
+                <td>501</td>
+                <td>23.45</td>
+                <td>1645.25</td>
+                <td>23542</td>
+                <td>42000</td>
+                <td>12354</td>
+                <td>152466</td>
+                <td>657852</td>
+                <td></td>
+                <td>52365</td>
+                <td>оксан</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>192654</td>
+                <td>Аксор</td>
+                <td>Площадка</td>
+                <td>6177</td>
+                <td>1500</td>
+                <td>300</td>
+                <td>2500</td>
+                <td>124562</td>
+                <td>2100</td>
+                <td>35000</td>
+                <td>162543</td>
+                <td>501</td>
+                <td>23.45</td>
+                <td>1645.25</td>
+                <td>23542</td>
+                <td>42000</td>
+                <td>12354</td>
+                <td>152466</td>
+                <td>657852</td>
+                <td></td>
+                <td>52365</td>
+                <td>оксан и вадлик + что то</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>192654</td>
+                <td>Площадка</td>
+                <td>втормет</td>
+                <td>6177</td>
+                <td>1500</td>
+                <td>300</td>
+                <td>2500</td>
+                <td>124562</td>
+                <td>2100</td>
+                <td>35000</td>
+                <td>162543</td>
+                <td>501</td>
+                <td>23.45</td>
+                <td>1645.25</td>
+                <td>23542</td>
+                <td>42000</td>
+                <td>12354</td>
+                <td>152466</td>
+                <td>657852</td>
+                <td></td>
+                <td>52365</td>
+                <td>оксан и вадлик + что то</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <p>Footer</p>
+    </div> -->
+  </body>
+</html>
