@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-// @import "./../node_modules/reset-css/sass/reset";
-// @import "~normalize.css";
+@import "reset.css";
+//@import "bootstrap/dist/css/bootstrap.min.css";
+@import "~bootstrap/scss/bootstrap";
+
+//@import "~normalize.css";
 
 @import "header";
 @import "toolbar";
 @import "formula";
 @import "table";
+@import "dashboard";
 
 // * {
 //   margin: 0;
@@ -20,4 +24,26 @@ body {
 
 .excel {
   position: relative;
+  color: #888;
+  height: 100%;
+  max-width: 100%;
+  font-size: 0.8rem;
+}
+
+// .table thead th {
+//   height: 30px;
+//   vertical-align: middle;
+// }
+// .table td,
+// .table th {
+// }
+// th,
+// td {
+//   text-align: center;
+//   // vertical-align: center;
+// }
+
+div table td {
+  min-height: 10px;
+  //   // vertical-align: top;
 }
