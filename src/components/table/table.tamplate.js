@@ -8,14 +8,20 @@ function toCell(content) {
 
 function toColumn(content) {
   // наша ячейка
-  return `<div class="column"> 
+  return `<div class="column" data-type="resizable"> 
            ${content}
+           <div class="col-resize" data-resize="row"></div>
           </div> `;
 }
 
 function createRow(index, content) {
+  const resize = index
+    ? `<div class="row-resize" data-resize="col"></div>`
+    : "";
   return `<div class="row"> 
-            <div class="row-info">${index ? index : ""}</div>
+            <div class="row-info">${index ? index : ""}
+            ${resize}
+            </div>
             <div class="row-data">${content}</div>
           </div> `;
 }
