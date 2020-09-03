@@ -2,13 +2,13 @@ const CODES = {
   A: 65,
   Z: 90,
 };
-function toCell(content) {
-  return `<div class="cell" contenteditable="">${content}</div> `;
+function toCell(content, index) {
+  return `<div class="cell" contenteditable="" data-col="${index}">${content}</div> `;
 }
 
-function toColumn(content) {
+function toColumn(content, index) {
   // наша ячейка
-  return `<div class="column" data-type="resizable"> 
+  return `<div class="column" data-type="resizable" data-col="${index}"> 
            ${content}
            <div class="col-resize" data-resize="row"></div>
           </div> `;
@@ -41,7 +41,7 @@ export function createTable(rowsCount = 15) {
   for (let i = 0; i < rowsCount; i++) {
     const cells = new Array(colsCount)
       .fill()
-      .map((el) => toCell("")) //вместо "" вставим значение нам нужное
+      .map((el, index) => toCell("", index)) //вместо "" вставим значение нам нужное
       .join("");
     rows.push(createRow(i + 1, cells));
   }
