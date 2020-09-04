@@ -18,10 +18,20 @@ class Dom {
     }
     return this.$el.outerHTML.trim();
   }
+  addClass(className) {
+    this.$el.classList.add(className);
+  }
+  removeClass(className) {
+    this.$el.classList.remove(className);
+  }
 
   clear() {
     this.html("");
     return this;
+  }
+
+  find(selector) {
+    return $(this.$el.querySelector(selector));
   }
 
   on(eventType, callback) {
