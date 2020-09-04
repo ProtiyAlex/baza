@@ -5,6 +5,11 @@ class Dom {
         ? document.querySelector(selector)
         : selector;
   }
+  css(styles = {}) {
+    Object.keys(styles).forEach((key) => {
+      this.$el.style[key] = styles[key];
+    });
+  }
 
   html(html) {
     if (typeof html === "string") {
