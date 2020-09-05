@@ -10,6 +10,10 @@ class Dom {
       this.$el.style[key] = styles[key];
     });
   }
+  focus() {
+    this.$el.focus();
+    return this;
+  }
 
   html(html) {
     if (typeof html === "string") {
@@ -23,6 +27,18 @@ class Dom {
   }
   removeClass(className) {
     this.$el.classList.remove(className);
+  }
+
+  id(parse) {
+    if (parse) {
+      const parsed = this.id().split(":");
+
+      return {
+        row: +parsed[0],
+        col: +parsed[1],
+      };
+    }
+    return this.data.id;
   }
 
   clear() {
