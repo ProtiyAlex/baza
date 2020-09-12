@@ -2,7 +2,10 @@ import { ExcelComponent } from "@core/ExcelComponent";
 import { createTable } from "./table.tamplate";
 import { resizeHandler } from "./table.resize";
 //import { shouldResize } from "./table.functions";
-import { TableSelection } from "./tableSelection";
+
+import { TableSelection } from "@/components/table/TableSelection";
+
+//import { TableSelection } from "./tableSelection";
 //import { isCell } from "./table.functions";
 //import { matrix } from "./table.functions";
 import { isCell, matrix, nextSelector, shouldResize } from "./table.functions";
@@ -11,15 +14,18 @@ import { $ } from "@core/dom";
 export class Table extends ExcelComponent {
   static className = "excel__table";
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
+      name: "Table",
       listeners: ["mousedown", "keydown"],
+      ...options,
     });
   }
 
   toHTML() {
     return createTable(20);
   }
+
   prepare() {
     this.selection = new TableSelection();
   }
@@ -27,8 +33,13 @@ export class Table extends ExcelComponent {
   init() {
     super.init();
 
-    const $cell = this.$root.find(`[data-id="0:0"]`);
+    const $cell = this.$root.find('[data-id="0:0"]');
     this.selection.select($cell);
+
+    this.emitter.subscribe("it is working", (text) => {
+      this.selection.current.text(text);
+      console.log("Table from Formula", text);
+    });
   }
 
   onMousedown(event) {
@@ -46,6 +57,7 @@ export class Table extends ExcelComponent {
       }
     }
   }
+
   onKeydown(event) {
     const keys = [
       "Enter",
@@ -56,10 +68,9 @@ export class Table extends ExcelComponent {
       "ArrowUp",
     ];
 
-    const { key } = event; //диструктуризация key из event
+    const { key } = event;
 
     if (keys.includes(key) && !event.shiftKey) {
-      //keys.includes в массиве keys присутствует
       event.preventDefault();
       const id = this.selection.current.id(true);
       const $next = this.$root.find(nextSelector(key, id));
